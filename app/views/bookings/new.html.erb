@@ -1,10 +1,13 @@
+<div class="banner" style="background-image: url(<%= image_path "banner.jpg" %>);">
 <h1>Create your Booking</h1>
-
-<%= simple_form_for [@gadget, @booking] do |f| %>
+<div class="flex-container">
+ <div> <%= simple_form_for [@gadget, @booking] do |f| %> </div>
   <%#$= f.input :gadget %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+ <div> <%= f.input :start_date %> </div>
+ <div> <%= f.input :end_date %> </div>
   <%#= f.input :total_price %>
 
-  <%= f.submit "book!", class: "btn btn-primary" %>
+<div> <%= f.submit "book!", class: "btn btn-primary" %> </div>
+</div>
+</div>
 <% end %>
