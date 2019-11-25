@@ -1,62 +1,37 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit]
-  #:update
-  #:edit
-  #:delete
-
-  def index
-    @user = current_user
-    @reservations = Booking.where(user: current_user)
-    @status = Booking.status
-  end
+  before_action :set_booking, only: [:show]
 
   def show
-    @gadget = Gadget.find(@booking.gadget_id)
-    @user = User.find(@booking.user_id)
+    authorize @booking
   end
 
   def new
     @booking = Booking.new
-    @gadget = Gadget.find(params[:id])
+    @gadget = Gadget.find(params[:gadget_id])
+    authorize @booking
   end
 
   def create
-    @booking = booking.new(booking_params)
-    @booking.user_id = current_user.id
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.gadget_id = params[:gadget_id]
-    @booking.status = "Pending"
-    if @booking.save!
-      redirect_to user_booking_path(@booking.user.id, @booking)
+    @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @booking.gadget.price
+    authorize @booking
+    if @booking.save
+      redirect_to gadget_booking_path(@booking.gadget, @booking)
     else
       render :new
     end
   end
 
-=begin
-  def edit
-  end
-
-  def update
-    if @booking.update(booking_params)
-      redirect_to user_bookings_path(@booking.user_id)
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @booking.destroy
-  end
-=end
-
   private
 
   def set_booking
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :gadget, :user, :total_price)
+    params.require(:booking).permit(:start_date, :end_date)
     #:status
   end
 end
