@@ -1,1 +1,13 @@
+<div class="banner" style="background-image: url(<%= image_path "banner.jpg" %>);">
 
+  <h1><strong>Congratulations, your booking has been confirmed!</strong></h1>
+
+  <h2><strong>Your Gadget Booking Details</strong></h2>
+
+    <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
+
+<p> <%= @booking.gadget.name %>
+
+ $ <%= @booking.gadget.price %> </p>
+
+</div>
