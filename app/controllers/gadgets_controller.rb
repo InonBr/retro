@@ -1,5 +1,5 @@
 class GadgetsController < ApplicationController
   def show
-    @gadget = Gadgets.find(params[:id])
+    @gadget = Gadget.find(params[:id])
   end
 end
