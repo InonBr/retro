@@ -5,7 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 user = User.new(first_name: 'ophira', last_name: 'blumner', email: 'ophirablumner@gmail.com', password: '123456')
 user.save
-gadget = Gadget.new(name:'typewriter', price: 10, year: 1978, category: 'writing', condition: 'good', user: user)
-gadget.save
+
+Gadget.destroy_all
+typewriter = Gadget.create(name:'typewriter', price: 20, year: 1978, category: 'writing', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+phone = Gadget.create(name:'phone', price: 5, year: 1920, category: 'phones', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+camera = Gadget.create(name:'camera', price: 15, year: 1936, category: 'cameras', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+turntable = Gadget.create(name:'turntable', price: 50, year: 1980, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+radio = Gadget.create(name:'radio', price: 12, year: 1945, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+tv = Gadget.create(name:'tv', price: 10, year: 1967, category: 'tv', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+
+
