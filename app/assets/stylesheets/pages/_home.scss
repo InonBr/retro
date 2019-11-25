@@ -1,1 +1,66 @@
-// Specific CSS for your home-page
+
+.banner {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-weight: bold;
+    text-shadow:  2px 2px #FF69B4;
+    font-size: 40px;
+    font-family: '8BITWONDERNominal';
+  }
+
+  h3 {
+    font-style: oblique;
+    text-shadow:  2px 2px #ff0000;
+    font-size: 40px;
+    font-family: '8BITWONDERNominal';
+  }
+
+  p {
+  text-shadow:  2px 2px #ff0000;
+  font-size: 40px;
+  font-family: '8BITWONDERNominal';
+}
+
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+
+}
+
+/*
+.search-bar {
+  width: 860px;
+  margin: 0 auto;
+}
+*/
+
+
+.btn2 {
+   text-align: center;
+   position: relative;
+   text-shadow:  2px 2px #ff0000;
+   background-color: #FF1493;
+
+}
+
+.btn2:hover {
+  background-color: #FF69B4;
+  text-shadow:  2px 2px #ff0000;
+  text-decoration: none;
+}
+
+// .btn2-content {
+// text-shadow:  2px 2px #ff0000;
+// }
+
+
+
+
+
