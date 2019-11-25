@@ -7,6 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+user = User.create!(
+  first_name: "David",
+  last_name: "blabla",
+  email: "david@fackmail.com",
+  password: "123456789"
+  )
+
 user = User.new(first_name: 'ophira', last_name: 'blumner', email: 'ophirablumner@gmail.com', password: '123456')
 user.save
 
@@ -17,5 +24,14 @@ camera = Gadget.create(name:'camera', price: 15, year: 1936, category: 'cameras'
 turntable = Gadget.create(name:'turntable', price: 50, year: 1980, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
 radio = Gadget.create(name:'radio', price: 12, year: 1945, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
 tv = Gadget.create(name:'tv', price: 10, year: 1967, category: 'tv', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+Gadget.create!(
+  user: user,
+  name:"some name",
+  price: 10,
+  year: 1991,
+  condition: "condition",
+  description: "Lorem ipsum dolor maiores sint numquam placeat!",
+  category: "category"
+  )
 
 
