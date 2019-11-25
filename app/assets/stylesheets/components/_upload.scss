@@ -1,0 +1,15 @@
+.upload-btn {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.4);
+  }
+}
+
+.upload-btn-move {
+  margin-left: 100px;
+  width: 150px;
+  text-align: center;
+}
