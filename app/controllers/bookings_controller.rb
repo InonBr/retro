@@ -1,23 +1,15 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit]
-  #:update
-  #:edit
-  #:delete
+  before_action :set_booking, only: [:show]
 
-  def index
-    @user = current_user
-    @reservations = Booking.where(user: current_user)
-    @status = Booking.status
-  end
-
-  def show
-    @gadget = Gadget.find(@booking.gadget_id)
-    @user = User.find(@booking.user_id)
-  end
+  # def show
+  #   @gadget = Gadget.find(@booking.gadget_id)
+  #   @user = User.find(@booking.user_id)
+  # end
 
   def new
     @booking = Booking.new
-    @gadget = Gadget.find(params[:id])
+    @gadget = Gadget.find(params[:gadget_id])
+    authorize @booking
   end
 
   def create
