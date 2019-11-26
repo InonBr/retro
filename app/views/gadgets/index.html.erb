@@ -20,7 +20,7 @@
     <div class="col-sm-4">
       <%= link_to gadget_path(gadget) do %>
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <%= cl_image_tag gadget.image %>
 
         <div class="card-product-infos">
           <h2><%= gadget.name.upcase %></h2>
