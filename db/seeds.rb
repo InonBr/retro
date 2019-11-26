@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+puts "destroy all users!!!"
+User.destroy_all
+puts "Done with users!!!"
+
+puts "destroy all users!!!"
+Gadget.destroy_all
+puts "Done with users!!!"
+
+puts "create user"
 user = User.create!(
   first_name: "David",
   last_name: "blabla",
@@ -14,25 +23,26 @@ user = User.create!(
   password: "123456789"
   )
 
-user = User.new(first_name: 'ophira', last_name: 'blumner', email: 'ophirablumner@gmail.com', password: '123456')
-user.save
+user2 = User.create!(
+  first_name: 'ophira',
+  last_name: 'blumner',
+  email: 'ophirablumner@gmail.com',
+  password: '123456'
+  )
+puts "done with user!"
 
-Gadget.destroy_all
-typewriter = Gadget.create(name:'typewriter', price: 20, year: 1978, category: 'writing', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
-phone = Gadget.create(name:'phone', price: 5, year: 1920, category: 'phones', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
-camera = Gadget.create(name:'camera', price: 15, year: 1936, category: 'cameras', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
-turntable = Gadget.create(name:'turntable', price: 50, year: 1980, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
-radio = Gadget.create(name:'radio', price: 12, year: 1945, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
-tv = Gadget.create(name:'tv', price: 10, year: 1967, category: 'tv', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
 
-Gadget.create!(
-  user: user,
-  name:"some name",
+ gagdet1 = Gadget.new(
+  user: user2,
+  name:"My old tv",
   price: 10,
   year: 1991,
-  condition: "condition",
+  condition: "New",
   description: "Lorem ipsum dolor maiores sint numquam placeat!",
-  category: "category"
+  category: "tv",
+  address: 'tel aviv'
   )
 
+gagdet1.remote_image_url = 'https://static.turbosquid.com/Preview/2019/05/07__14_24_00/Retro_TV_Showa_Dirt_01.jpg92A531C4-8D17-47CE-95CF-2B6B233B28EAZoom.jpg'
 
+gagdet1.save!
