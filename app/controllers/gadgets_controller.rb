@@ -1,6 +1,7 @@
 class GadgetsController < ApplicationController
-  skip_before_action :authenticate_user!
-  before_action only: %i[new]
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :generate_gadget, only: %i[new]
+
   def show
     @gadget = Gadget.find(params[:id])
     authorize @gadget
@@ -11,16 +12,19 @@ class GadgetsController < ApplicationController
   end
 
   def new
+    authorize @gadget
   end
 
   def create
     @gadget = Gadget.new(gadget_params)
+    @gadget.user = current_user
 
     if @gadget.save
-      redirect_to(@gadget)
+      redirect_to gadget_path(@gadget)
     else
       render :new
     end
+    authorize @gadget
   end
 
   private
@@ -31,8 +35,8 @@ class GadgetsController < ApplicationController
 
   def gadget_params
     params.require(:gadget).permit(
-      :name, :price, :image,
-      :year, :condition, :description
+      :name, :price, :image, :year, :category,
+      :condition, :description, :address
     )
   end
 end
