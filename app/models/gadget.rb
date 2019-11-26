@@ -6,6 +6,9 @@ class Gadget < ApplicationRecord
   validates :name, presence: true
   validates :year, presence: true, numericality: { only_integer: true }
   validates :price, numericality: { only_integer: true }
-  validates :condition, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
+  validates :condition, presence: true, acceptance: { accept: ['New', 'Lightly Used', 'Used'] }
+  validates :address, presence: true
+
+  mount_uploader :image, ImageUploader
 end
