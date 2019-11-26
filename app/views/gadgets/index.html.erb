@@ -1,6 +1,20 @@
 
 <div class="container index-page">
-  <h1>Explore</h1>
+
+  <h1 style="font-family: 'Raleway', sans-serif; font-weight: lighter; font-size: 60px;">Explore</h1>
+  <br>
+
+  <div class="filter d-flex justify-content-between">
+  <%= link_to 'Cameras', gadgets_path(category: 'cameras'), class: "link-text" %>
+  <%= link_to 'Computers', gadgets_path(category: 'computers'), class: "link-text" %>
+  <%= link_to 'TV', gadgets_path(category: 'tv'), class: "link-text" %>
+  <%= link_to 'Games', gadgets_path(category: 'games'), class: "link-text" %>
+  <%= link_to 'Music', gadgets_path(category: 'music'), class: "link-text" %>
+  <%= link_to 'Phones', gadgets_path(category: 'phones'), class: "link-text" %>
+  <%= link_to 'Writing', gadgets_path(category: 'writing'), class: "link-text" %>
+  </div>
+
+
   <div class="row">
       <% @gadgets.each do |gadget| %>
     <div class="col-sm-4">
@@ -18,4 +32,5 @@
     </div>
     <% end %>
     </div>
+
 </div>
