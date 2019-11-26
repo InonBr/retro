@@ -15,8 +15,11 @@
 @import "components/upload";
 @import "pages/index";
 
-.navbar-wagon-brand img {
-  width: 50px;
-}
+//@import "bookings/new";
+@import "bookings/show";
+@import "bookings/new";
+
+@import "flatpickr/dist/flatpickr.min"
+
 
 
