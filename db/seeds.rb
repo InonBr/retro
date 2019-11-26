@@ -24,6 +24,7 @@ camera = Gadget.create(name:'camera', price: 15, year: 1936, category: 'cameras'
 turntable = Gadget.create(name:'turntable', price: 50, year: 1980, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
 radio = Gadget.create(name:'radio', price: 12, year: 1945, category: 'music', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
 tv = Gadget.create(name:'tv', price: 10, year: 1967, category: 'tv', condition: 'good', user: user, description: 'Lorem ipsum dolor sit amet.')
+
 Gadget.create!(
   user: user,
   name:"some name",
