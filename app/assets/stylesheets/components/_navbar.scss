@@ -36,3 +36,27 @@
 .upload {
   color: blue;
 }
+
+.login {
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  top: 15px;
+  right: 10px;
+}
+
+.login:hover {
+  text-decoration: none;
+}
+
+.sign-up {
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  top: 15px;
+  right: 35px;
+}
+
+.sign-up:hover {
+  text-decoration: none;
+}

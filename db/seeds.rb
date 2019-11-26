@@ -41,6 +41,7 @@ puts "done with user!"
   description: "Lorem ipsum dolor maiores sint numquam placeat!",
   category: "tv",
   address: 'tel aviv'
+
   )
 
 gagdet1.remote_image_url = 'https://static.turbosquid.com/Preview/2019/05/07__14_24_00/Retro_TV_Showa_Dirt_01.jpg92A531C4-8D17-47CE-95CF-2B6B233B28EAZoom.jpg'
