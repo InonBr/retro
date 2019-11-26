@@ -8,6 +8,7 @@ class GadgetsController < ApplicationController
   end
 
   def index
+
     if params[:category].present?
       @gadgets = policy_scope(Gadget).where(category: params[:category])
     else

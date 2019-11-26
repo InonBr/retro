@@ -32,7 +32,7 @@ Gadget.create!(
   year: 1991,
   condition: "condition",
   description: "Lorem ipsum dolor maiores sint numquam placeat!",
-  category: "category"
+  category: "cameras"
   )
 
 
