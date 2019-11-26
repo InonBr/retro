@@ -18,7 +18,7 @@
   <div class="row">
       <% @gadgets.each do |gadget| %>
     <div class="col-sm-4">
-
+      <%= link_to gadget_path(gadget) do %>
       <div class="card-product">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
 
@@ -29,6 +29,7 @@
           </div>
         </div>
       </div>
+      <% end %>
     </div>
     <% end %>
     </div>

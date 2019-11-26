@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url(<%= image_path "banner.jpg" %>);">
+<div class="banner banner-center-align"  style="background-image: url(<%= image_path "banner.jpg" %>);">
   <!--style="background-image: url(<%= image_path "banner.jpg" %>);"-->
 
   <h1><strong>Booking confirmed!</strong></h1>
@@ -8,8 +8,10 @@
     <strong>Start Date: <%= @booking.start_date %></strong>
     <strong>End Date: <%= @booking.end_date %></strong>
 
-<p> <%= @booking.gadget.name %>
+<p> <%= @booking.gadget.name %> <br>
 
- $ <%= @booking.gadget.price %> </p>
+ $<%= @booking.gadget.price %> </p>
+
+ <a href="/gadgets" class="btn2 btn-danger btn-lg" width="50" height="50">Book More!</a>
 
 </div>

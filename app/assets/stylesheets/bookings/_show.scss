@@ -39,7 +39,28 @@
     color: white;
 
   }
+
 }
+
+
+.banner-center-align {
+  align-items: center;
+}
+
+.btn2 {
+   text-align: center;
+   /*position: relative;*/
+   text-shadow:  2px 2px #ff0000;
+   background-color: #FF1493;
+   display: inline-block;
+}
+
+.btn2:hover {
+  background-color: #FF69B4;
+  text-shadow:  2px 2px #ff0000;
+  text-decoration: none;
+}
+
 .banner-content {
   color: white;
 }
