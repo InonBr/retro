@@ -1,0 +1,65 @@
+.login-form {
+  background-image: url(https://i.pinimg.com/originals/12/11/3a/12113a58680db0eb277f4fe1ded888f9.gif);
+  background-size: cover;
+  padding: 100px;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top: 20px;
+  border: 1px solid black;
+  box-shadow: 10px 8px 5px #7F7E7E;
+}
+
+.login-form h2 {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+.form-inputs {
+  font-family: 'Tomorrow', sans-serif;
+  background-color: transparent;
+}
+
+.form-inputs input {
+  background-color: rgba(0,0,0,0.1);
+  color: black;
+}
+
+.form-actions {
+  font-family: 'Tomorrow', sans-serif;
+  position: relative;
+  right: 13px;
+}
+
+.form-actions .btn:hover {
+  color: white;
+}
+
+.sign-up-link {
+  font-family: 'Tomorrow', sans-serif;
+  color: black;
+  font-size: 16px;
+  position: relative;
+  left: 0px;
+  top: 16px;
+}
+
+.sign-up-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.forgot-password {
+  font-family: 'Tomorrow', sans-serif;
+  color: black;
+  font-size: 16px;
+  position: relative;
+  top: 25px;
+}
+
+.forgot-password:hover {
+  text-decoration: none;
+  color: white;
+}
