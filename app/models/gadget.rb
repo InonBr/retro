@@ -2,6 +2,10 @@ class Gadget < ApplicationRecord
   has_many :bookings, dependent: :destroy
   belongs_to :user
 
+  # create geocode by address field
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   CATEGORIES = ["cameras", "computers", "tv", "music", "phones", "games", "writing"]
   validates :name, presence: true
   validates :year, presence: true, numericality: { only_integer: true }

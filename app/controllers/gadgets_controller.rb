@@ -3,12 +3,22 @@ class GadgetsController < ApplicationController
   before_action :generate_gadget, only: %i[new]
 
   def show
-    @gadget = Gadget.find(params[:id])
+    @gadget = Gadget.geocoded.find(params[:id])
+
+    @marker = {
+      lat: @gadget.latitude,
+      lng: @gadget.longitude,
+      infoWindow: render_to_string(
+        partial: "info_window",
+        locals: { gadget: @gadget }
+      ),
+      image_url: helpers.asset_url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/electric-light-bulb_1f4a1.png')
+    }
+
     authorize @gadget
   end
 
   def index
-
     if params[:category].present?
       @gadgets = policy_scope(Gadget).where(category: params[:category])
     else
