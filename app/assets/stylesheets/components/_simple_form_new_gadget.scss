@@ -1,3 +1,31 @@
 .simple-form-new-gadget {
-  margin: 36px;
+  padding: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 3px solid #FDC8FF;
+  border-radius: 13px;
+  box-shadow: 9px 7px 5px gray;
+  background-color: #FDC8FF;
+  opacity: 0.95;
+  font-family: 'Tomorrow', sans-serif;
+
+}
+
+.simple-form-new-gadget h1 {
+  position: relative;
+  bottom: 20px;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.new-gadget-form-wrapper {
+  background-image: url(https://static.thenounproject.com/png/2526008-200.png);
+  background-repeat: space;
+  background-size: 70px;
+  padding: 110px;
+
+}
+
+.btn-upload {
+  background-color: gray;
+  border-radius: 5px;
 }

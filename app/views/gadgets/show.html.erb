@@ -1,6 +1,4 @@
 <div class="box">
-
-
   <div class="box-to-flex">
     <div class="left-box">
       <%= cl_image_tag @gadget.image ,:alt => "#{@gadget.name} image", class: "image-show"      %>
@@ -13,7 +11,7 @@
       <p>Condition: <%= @gadget.condition %></p>
       <p>Category: <%= @gadget.category %></p>
       <div class="price-order">
-      <p>price: $<%= @gadget.price %> per day</p>
+      <p>Price: $<%= @gadget.price %> per day</p>
       <%= link_to "Book now!", new_gadget_booking_path(@gadget), class: "nice-button" %>
       </div>
     </div>

@@ -1,4 +1,7 @@
+<div class="new-gadget-form-wrapper">
+
 <div class="simple-form-new-gadget">
+  <h1>Upload Your Gadget</h1>
 <%= simple_form_for @gadget do |f| %>
   <%= f.input :name %>
   <%= f.input :price %>
@@ -9,7 +12,6 @@
   %>
   <%= f.input :year %>
 
-  <%= f.input :category %>
   <%=
     f.input :category,
     collection: [
@@ -24,8 +26,10 @@
   <%= f.input :image_cache, as: :hidden %>
   <%=
     f.button :submit,
-    'I like big gadgets and I cannot lie!',
-    class: "btn btn-primary"
+    'Upload Now',
+    class: "btn-upload"
   %>
 <% end %>
+</div>
+
 </div>
