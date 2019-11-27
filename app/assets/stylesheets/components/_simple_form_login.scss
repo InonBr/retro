@@ -1,12 +1,14 @@
 .login-form {
   background-image: url(https://i.pinimg.com/originals/12/11/3a/12113a58680db0eb277f4fe1ded888f9.gif);
   background-size: cover;
-  padding: 100px;
+  padding: 125px;
   margin-left: 350px;
   margin-right: 350px;
   margin-top: 20px;
-  border: 1px solid black;
+  padding-bottom: -100px;
+  border: 1px solid gray;
   box-shadow: 10px 8px 5px #7F7E7E;
+  border-radius: 13px;
 }
 
 .login-form h2 {
@@ -14,7 +16,7 @@
   font-family: 'Tomorrow', sans-serif;
   color: black;
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
 }
 
 .form-inputs {
