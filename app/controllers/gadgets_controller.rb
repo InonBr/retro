@@ -3,17 +3,29 @@ class GadgetsController < ApplicationController
   before_action :generate_gadget, only: %i[new]
 
   def show
-    @gadget = Gadget.geocoded.find(params[:id])
+    @gadget = Gadget.find(params[:id])
 
-    @marker = {
-      lat: @gadget.latitude,
-      lng: @gadget.longitude,
-      infoWindow: render_to_string(
-        partial: "info_window",
-        locals: { gadget: @gadget }
-      ),
-      image_url: helpers.asset_url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/electric-light-bulb_1f4a1.png')
-    }
+    if @gadget.latitude && @gadget.longitude
+      @marker = {
+        lat: @gadget.latitude,
+        lng: @gadget.longitude,
+        infoWindow: render_to_string(
+          partial: "info_window",
+          locals: { gadget: @gadget }
+        ),
+        image_url: helpers.asset_url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/electric-light-bulb_1f4a1.png')
+      }
+    else
+      @marker = {
+        lat: 32.0853,
+        lng: 34.7818,
+        infoWindow: render_to_string(
+          partial: "info_window",
+          locals: { gadget: @gadget }
+        ),
+        image_url: helpers.asset_url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/electric-light-bulb_1f4a1.png')
+      }
+    end
 
     authorize @gadget
   end

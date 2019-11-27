@@ -31,28 +31,25 @@ user2 = User.create!(
   )
 puts "done with user!"
 
-addresses = %w(
-Hanassi St.
-Jerusalem 92188
+addresses = [
+"Dizengoff St 50",
 
-Kiryat Ben-Gurion
-Jerusalem 91950
+"Shlomo Ibn Gabirol St 98",
 
-23 Yaffo St.
-Jerusalem 91999
+"Frishman St 42",
 
-237 Yaffo St.
-Jerusalem 91999
+"HaYarkon St 71",
 
-Shaul Hamelech 8
-Tel Aviv 64733
+"King George St 47",
 
-13 Weizmann Blvd.
-Jerusalem 91909
+"Weizmann St 13",
 
-Hahistadrut 5
-Jerusalem
-)
+"Levinsky 108",
+
+"Ben Yehuda 32"
+
+]
+
 
 instruments = [Faker::Music.instrument,
                Faker::Music.instrument,
@@ -80,7 +77,7 @@ CATEGORIES.each_with_index do |category, index|
       condition: ['New', 'Lightly Used', 'Used'].sample,
       description: "This is a really nice #{adjectives.sample}",
       category: category,
-      address: "'#{addresses.sample}'"
+      address: " #{addresses.sample}"
       )
     gadget.remote_image_url = "https://source.unsplash.com/#{(1200..1900).to_a.sample}x#{(600..900).to_a.sample}/?#{category}"
     # gadget.remote_image_url = "https://source.unsplash.com/collection/2476111/"
@@ -89,6 +86,7 @@ CATEGORIES.each_with_index do |category, index|
     #"https://source.unsplash.com/collection/566311/"
     #'https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2702&q=80'
     gadget.save
+    sleep 1
     puts "Gadget #{gadget.name} created"
 end
 end
