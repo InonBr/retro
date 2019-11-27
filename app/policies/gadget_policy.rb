@@ -12,4 +12,16 @@ class GadgetPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def dashboard?
+    user
+  end
+
+  def destroy?
+    record.user == user
+  end
+
+  def update?
+    record.user == user
+  end
 end

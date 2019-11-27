@@ -18,7 +18,7 @@ puts "create user"
 
 user1 = User.create!(
   first_name: "inon",
-  last_name: "blabla",
+  last_name: "bercu",
   email: "inon@fackmail.com",
   password: "1234567"
   )

@@ -1,6 +1,7 @@
 class GadgetsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :generate_gadget, only: %i[new]
+  before_action :params_id, only: %i[edit update destroy]
 
   def show
     @gadget = Gadget.geocoded.find(params[:id])
@@ -42,10 +43,32 @@ class GadgetsController < ApplicationController
     authorize @gadget
   end
 
+  def edit
+    authorize @gadget
+  end
+
+  def update
+    authorize @gadget
+    if @gadget.update(gadget_params)
+      redirect_to gadget_path(@gadget)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    authorize @gadget
+    @gadget.destroy
+  end
+
   private
 
   def generate_gadget
     @gadget = Gadget.new
+  end
+
+  def params_id
+    @gadget = Gadget.find(params[:id])
   end
 
   def gadget_params
