@@ -11,7 +11,7 @@
       <p><%= @gadget.description%></p>
       <p>Year: <%= @gadget.year %></p>
       <p>Condition: <%= @gadget.condition %></p>
-      <p>Gategory: <%= @gadget.category %></p>
+      <p>Category: <%= @gadget.category %></p>
       <div class="price-order">
       <p>price: $<%= @gadget.price %> per day</p>
       <%= link_to "Book now!", new_gadget_booking_path(@gadget), class: "nice-button" %>
@@ -20,8 +20,10 @@
   </div>
 </div>
 
-<div class="map">
-
+<div id="map"
+  data-marker="<%= @marker.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
 
 
