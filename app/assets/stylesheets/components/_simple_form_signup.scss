@@ -1,0 +1,31 @@
+.signup-form {
+  background-image: url(https://i.pinimg.com/originals/d7/39/1d/d7391db3e1c8a1752e287a926a520e77.gif);
+  background-size: cover;
+  padding: 100px;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  box-shadow: 10px 8px 5px #7F7E7E;
+  border-radius: 13px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+.login-link {
+  color: white;
+  text-shadow: 2px 2px gray;
+  font-size: 20px;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.login-link:hover {
+  text-decoration: none;
+  color: black;
+}
