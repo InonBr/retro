@@ -18,6 +18,7 @@
   <div class="row">
       <% @gadgets.each do |gadget| %>
     <div class="col-sm-4">
+      <div class="card-link">
       <%= link_to gadget_path(gadget) do %>
       <div class="card-product">
         <%= cl_image_tag gadget.image %>
@@ -30,6 +31,7 @@
         </div>
       </div>
       <% end %>
+    </div>
     </div>
     <% end %>
     </div>
