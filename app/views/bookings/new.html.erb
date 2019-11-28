@@ -2,7 +2,7 @@
   <div class="banner" style="background-image: url(<%= image_path "banner.jpg" %>);">
     <p class="t"> Create Booking </p>
     <div class="container">
-      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto; background: #ffffff82; border-radius: 10px; padding: 20px;">
         <h2>Booking!</h2>
         <%= simple_form_for([@gadget, @booking]) do |f| %>
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
