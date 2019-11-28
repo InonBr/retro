@@ -1,24 +1,28 @@
 <h1>Gadgets I posted:</h1>
-  <div class="row">
-      <% @gadgets.each do |gadget| %>
-    <div class="col-sm-4">
-      <%= link_to gadget_path(gadget) do %>
-      <div class="card-product">
-        <%= cl_image_tag gadget.image %>
-
-        <div class="card-product-infos">
-          <h2><%= gadget.name.upcase %></h2>
-          <div class="scroll">
+<div class="row">
+  <% @gadgets.each do |gadget| %>
+  <div class="col-sm-4" data-gadget-id="<%= gadget.id %>">
+    <%= link_to gadget_path(gadget) do %>
+    <div class="card-product">
+      <%= cl_image_tag gadget.image %>
+      <div class="card-product-infos">
+        <h2><%= gadget.name.upcase %></h2>
+        <div class="scroll">
           <p> Description: <%= gadget.description %> </p>
-          </div>
+          <%= link_to gadget_path(gadget),
+                      method: :delete,
+                      data: {confirm: "Are you sure?"},
+                      remote: true do %>
+              <i class="fas fa-trash"></i>
+          <% end %>
         </div>
       </div>
-      <% end %>
     </div>
     <% end %>
-    </div>
+  </div>
+  <% end %>
 </div>
-
+</div>
 
 <h1>Gadgets I rented:</h1>
 <ul>
