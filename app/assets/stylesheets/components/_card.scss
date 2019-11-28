@@ -1,12 +1,11 @@
 .card-product {
   margin-top: 5vh;
-  // overflow: hidden;
   height: 25vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 10px;
 
 }
 
@@ -21,6 +20,7 @@
   font-weight: bold;
   margin: 0;
 }
+
 
 .card-product p {
   font-size: 12px;
