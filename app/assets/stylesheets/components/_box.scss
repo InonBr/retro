@@ -6,8 +6,9 @@
   margin: 100px auto;
   margin-bottom: 10px;
   width: 90%;
-  background-color: white;
-  border-radius: 6px;
+  background-color: #FDE1DD;
+  border-radius: 15px;
+  box-shadow: 7px 5px 10px gray;
 
   p {
     color: #696969;
@@ -16,6 +17,7 @@
 
 .box-to-flex {
   display: flex;
+
 }
 
 .price-order {
@@ -27,6 +29,7 @@
 .right-box {
   margin-left: 18px;
   margin-right: 18px;
+  padding: 20px;
 }
 
 .price-order {
@@ -37,7 +40,7 @@
 }
 
 .nice-button {
-  background-color: #f08a5d;
+  background-color: #939597;
   text-decoration: none;
   font-size: 16px;
   text-align: center;
@@ -47,11 +50,25 @@
   border-radius: 8px;
   transition: 0.3s;
   font-family: 'Tomorrow', sans-serif;
+  position: relative;
+  top: 20px;
+  left: 290px;
 
   &:hover {
     text-decoration: none;
-    color: white;
+    color: gray;
     box-shadow: 2px 4px rgba(150, 150, 150, 0.4 );
-    background-color: #b83b5e;
+    background-color: #F4F4F4;
   }
+}
+
+.main {
+  padding-top: 80px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#map {
+  border: 2px dashed #939597;
+  border-radius: 5px;
 }

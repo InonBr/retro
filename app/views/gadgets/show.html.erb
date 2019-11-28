@@ -1,3 +1,5 @@
+
+<div class="main">
 <div class="box">
   <div class="box-to-flex">
     <div class="left-box">
@@ -5,11 +7,11 @@
     </div>
 
     <div class="right-box">
-      <h1><%= @gadget.name %></h1>
+      <h1><%= @gadget.name.capitalize %></h1>
       <p><%= @gadget.description%></p>
-      <p>Year: <%= @gadget.year %></p>
-      <p>Condition: <%= @gadget.condition %></p>
-      <p>Category: <%= @gadget.category %></p>
+      <p><strong>Year:</strong> <%= @gadget.year %></p>
+      <p><strong>Condition:</strong> <%= @gadget.condition %></p>
+      <p><strong>Category:</strong> <%= @gadget.category %></p>
       <div class="price-order">
       <p>Price: $<%= @gadget.price %> per day</p>
       <%= link_to "Book now!", new_gadget_booking_path(@gadget), class: "nice-button" unless @gadget.user == current_user %>
@@ -18,7 +20,11 @@
   </div>
 </div>
 
+<br>
+
+
 <div id="map"
   data-marker="<%= @marker.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
