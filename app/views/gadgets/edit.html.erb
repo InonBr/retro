@@ -1,0 +1,22 @@
+<div class="box">
+<h1 class="edit mt-20"> Edit Your Gadget Info </h1>
+
+<%= simple_form_for @gadget do |f| %>
+<%= f.input :name %>
+<%= f.input :price %>
+<%= f.input :condition, collection: ['New', 'Lightly Used', 'Used'],
+    include_blank: false %>
+<%= f.input :year %>
+<%= f.input :category, collection:['cameras', 'computers', 'tv',
+      'games', 'music', 'phones', 'writing'],
+    include_blank: false %>
+<%= f.input :address %>
+<%= f.input :description %>
+ <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+<%=f.button :submit,'Edit Now',class: "btn-edit"%>
+
+<% end %>
+
+
+</div>
