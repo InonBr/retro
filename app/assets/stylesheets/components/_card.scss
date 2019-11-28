@@ -6,7 +6,10 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-
+  // background-image: url(https://images-na.ssl-images-amazon.com/images/I/21FFqa1jgEL._SY355_.jpg);
+  // background-size: cover;
+  border: 1px solid #FDE1DD;
+  background-color: #FDE1DD;
 }
 
 .card-product img {
@@ -28,13 +31,39 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-size: 15px;
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+    padding: 16px;
+    color: black;
+    transition: 0.2s;
 }
 
 .scroll {
   overflow-y: scroll;
   height: 15vh;
+}
+
+.card-link {
+  h2 {
+    font-weight: lighter;
+    transition: 0.2s;
+  }
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+
+}
+
+.card-link a:hover {
+  text-decoration: none;
+  .card-product-infos h2 {
+    color: black;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px gray;
+  }
+  .card-product-infos {
+    color: black;
+    font-weight: normal;
+  }
 }
