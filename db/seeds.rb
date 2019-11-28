@@ -32,21 +32,21 @@ user2 = User.create!(
 puts "done with user!"
 
 addresses = [
-"Dizengoff St 50",
+"Dizengoff St 50 Tel Aviv-Yafo",
 
-"Shlomo Ibn Gabirol St 98",
+"Shlomo Ibn Gabirol St 98 Tel Aviv-Yafo",
 
-"Frishman St 42",
+"Frishman St 42 Tel Aviv-Yafo",
 
-"HaYarkon St 71",
+"HaYarkon St 71 Tel Aviv-Yafo",
 
-"King George St 47",
+"King George St 47 Tel Aviv-Yafo",
 
-"Weizmann St 13",
+"Weizmann St 13 Tel Aviv-Yafo",
 
-"Levinsky 108",
+"Levinsky 108 Tel Aviv-Yafo",
 
-"Ben Yehuda 32"
+"Ben Yehuda 32 Tel Aviv-Yafo"
 
 ]
 
