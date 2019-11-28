@@ -1,17 +1,18 @@
 <div class="banner banner-center-align"  style="background-image: url(<%= image_path "banner.jpg" %>);">
   <!--style="background-image: url(<%= image_path "banner.jpg" %>);"-->
+  <div class="back-ground-booking">
+    <h1><strong>Booking confirmed!</strong></h1>
 
-  <h1><strong>Booking confirmed!</strong></h1>
+    <h2><strong>Booking Details</strong></h2>
 
-  <h2><strong>Booking Details</strong></h2>
+      <strong>Start Date: <%= @booking.start_date %></strong>
+      <strong>End Date: <%= @booking.end_date %></strong>
 
-    <strong>Start Date: <%= @booking.start_date %></strong>
-    <strong>End Date: <%= @booking.end_date %></strong>
+      <p> <%= @booking.gadget.name %> <br>
 
-<p> <%= @booking.gadget.name %> <br>
+      $<%= @booking.gadget.price %> </p>
 
- $<%= @booking.gadget.price %> </p>
-
- <a href="/gadgets" class="btn2 btn-danger btn-lg" width="50" height="50">Book More!</a>
+      <a href="/gadgets" class="btn2 btn-danger btn-lg" width="50" height="50">Book More!</a>
+  </div>
 
 </div>
