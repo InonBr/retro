@@ -9,6 +9,9 @@
         <h2><%= gadget.name.upcase %></h2>
         <div class="scroll">
           <p> Description: <%= gadget.description %> </p>
+          <%= link_to edit_gadget_path(gadget) do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
           <%= link_to gadget_path(gadget),
                       method: :delete,
                       data: {confirm: "Are you sure?"},
