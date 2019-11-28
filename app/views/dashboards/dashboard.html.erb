@@ -3,20 +3,20 @@
 <div class="row">
   <% @gadgets.each do |gadget| %>
   <div class="col-sm-4" data-gadget-id="<%= gadget.id %>">
-    <%= link_to gadget_path(gadget) do %>
+    <%= link_to gadget_path(gadget), class: "dashboard-link" do %>
     <div class="card-product">
       <%= cl_image_tag gadget.image %>
       <div class="card-product-infos">
         <h2><%= gadget.name.upcase %></h2>
         <div class="scroll">
           <p> Description: <%= gadget.description %> </p>
-          <%= link_to edit_gadget_path(gadget) do %>
+          <%= link_to edit_gadget_path(gadget), class: "dashboard-link" do %>
             <i class="fas fa-edit"></i>
           <% end %>
           <%= link_to gadget_path(gadget),
                       method: :delete,
                       data: {confirm: "Are you sure?"},
-                      remote: true do %>
+                      remote: true, class: "dashboard-link" do %>
               <i class="fas fa-trash"></i>
           <% end %>
         </div>
