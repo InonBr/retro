@@ -12,7 +12,7 @@
       <p>Category: <%= @gadget.category %></p>
       <div class="price-order">
       <p>Price: $<%= @gadget.price %> per day</p>
-      <%= link_to "Book now!", new_gadget_booking_path(@gadget), class: "nice-button" %>
+      <%= link_to "Book now!", new_gadget_booking_path(@gadget), class: "nice-button" unless @gadget.user == current_user %>
       </div>
     </div>
   </div>
