@@ -71,6 +71,10 @@ class GadgetsController < ApplicationController
   def destroy
     authorize @gadget
     @gadget.destroy
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
